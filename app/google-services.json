@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1049569520577",
+    "project_id": "libraryapplication-9f69e",
+    "storage_bucket": "libraryapplication-9f69e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049569520577:android:02e08f7812f1c06cb01d40",
+        "android_client_info": {
+          "package_name": "jp.co.cybermissions.com.example.libaraysystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049569520577-mpba3kpe7d2c0r58aq3dlip1f1ih5rk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4Y5Oad3LDxyu4IRd0y8BxbBlpB_FGVts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049569520577-mpba3kpe7d2c0r58aq3dlip1f1ih5rk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
