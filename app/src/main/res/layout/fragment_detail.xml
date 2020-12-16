@@ -24,7 +24,7 @@
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Java Programing language"
+            android:text="@{detailViewModel.booklist1.get(0).toString()}"
             android:layout_marginStart="160dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="160dp"
@@ -44,7 +44,6 @@
             android:background="@color/colorAccent"
             android:padding="10dp"
             android:text="Rent"
-            android:onClick="@{() -> detailViewModel.bookCount()}"
             android:textColor="@color/white"
             android:textSize="26sp"
             tools:ignore="MissingConstraints" />
