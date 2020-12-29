@@ -1,0 +1,27 @@
+[
+  {
+      "imageResId": 1,
+      "name":"Java",
+      "description":"Java Programming language"
+    },
+    {
+      "imageResId": 2,
+      "name":"HTML",
+      "description":"HTML Programming language"
+    },
+    {
+      "imageResId": 3,
+      "name":"RUBY",
+      "description":"RUBY Programming language"
+    },
+    {
+      "imageResId": 4,
+      "name":"C#",
+      "description":"C# Programming language"
+    },
+    {
+      "imageResId": 5,
+      "name":"DIGITAL",
+      "description":"DIGITAL Programming language"
+    }
+]
