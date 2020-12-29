@@ -1,125 +1,28 @@
 package jp.co.cybermissions.com.example.libaraysystem.detail
 
-import android.R
-import android.view.View
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.*
+import jp.co.cybermissions.com.example.libaraysystem.book.Book
 
 
-class DetailViewModel: ViewModel() {
-    private val _book = MutableLiveData<String>()
-    val book: LiveData<String>
-        get() = _book
+class DetailViewModel( book: Book,
+                       app: Application
+) : AndroidViewModel(app) {
 
-    data class Book(
-            val text: String)
-
-//    private val books: MutableList<Book> = mutableListOf(
-//            Book(text = "Java Programing language"),
-//            Book(text = "HTML Programing language"),
-//            Book(text = "RUBY Programing language"),
-//            Book(text = "C# Programing language"),
-//            Book(text = "DIGITAL Programing language"))
-
-    var booklist1 = listOf("Java Programing language", 3)
-    var booklist2 = listOf("HTML Programing language", 3)
-    var booklist3 = listOf("RUBY Programing language", 3)
-    var booklist4 = listOf("C# Programing language", 3)
-    var booklist5 = listOf("DIGITAL Programing language", 3);
-
-
-
-//    lateinit var currentBook: Book
-//    lateinit var text: MutableList<String>
-//    //private var bookIndex = 0
-//    private var bookIndex = 0
+    private val _selectedProperty = MutableLiveData<Book>()
+    val selectedProperty: LiveData<Book>
+        get() = _selectedProperty
 
     init {
-        //text = currentBook.text.toMutableList()
-        //currentBook = books[bookIndex++]
-        //onClick()
-
-
-
-
+        _selectedProperty.value = book
     }
-//    private fun onClick(){
-//        for (i in booklist){
-//            booklist.elementAt(1)
-//        }
-//    }
-
-    private fun onClick(){
-//        println(booklist.get(0))
-//        println(booklist.get(1))
-//        println(booklist.get(2))
-//        println(booklist.get(3))
-//        println(booklist.get(4))
-
-
-    }
-
-    override fun onCleared(){
-        val editText1 = booklist1.get(0)
-        val editText2 = booklist2.get(0)
-        val editText3 = booklist3.get(0)
-        val editText4 = booklist4.get(0)
-        val editText5 = booklist5.get(0)
-
-
-
-
-    }
-
-
-
 //
-//
-//
-//    private fun resetBookList(){
-//         if(booklist1.get(1)  == 0){
-//
-//         }
+//    val displayName = Transformations.map(selectedProperty) {
 //
 //    }
-//    var booklist1 = listOf("Java Programing language", 3)
-//    var booklist2 = listOf("HTML Programing language", 3)
-//    var booklist3 = listOf("RUBY Programing language", 3)
-//    var booklist4 = listOf("C# Programing language", 3)
-//    var booklist5 = listOf("DIGITAL Programing language", 3);
 //
-//    private val _score = MutableLiveData<Int>()
-//    val score: LiveData<Int>
-//        get() = _score
-//
-//
-//    private val _eventFinish = MutableLiveData<Boolean>()
-//    val eventFinish: LiveData<Boolean>
-//        get() = _eventFinish
-//
-//    init{
-//        _score.value = 0
-//        //bookCount()
-//    }
-//
-//    fun bookCount(){
-//        _score.value = (score.value)?.minus(1)
-//        onFinish()
+//    val displayDescription = Transformations.map(selectedProperty) {
 //
 //    }
-//    fun onFinish() {
-//        _eventFinish.value = true
-//    }
-//
-//    fun onFinishComplete() {
-//        _eventFinish.value = false
-//    }
-//
-////    private fun resetList() {
-////        val count1 = booklist1.get(1)
-////        if (count1 == 0){
-////
-////        }
-////    }
+
 }

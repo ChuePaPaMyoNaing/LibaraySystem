@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="jp.co.cybermissions.com.example.libaraysystem.list.DetailFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="detailViewModel"
             type="jp.co.cybermissions.com.example.libaraysystem.detail.DetailViewModel" />
-        <!--        <variable-->
-        <!--            name="detail"-->
-        <!--            type="jp.co.cybermissions.com.example.libaraysystem.detail.DetailFragment" />-->
+        <import type="android.view.View"/>
+        <variable
+            name="property"
+            type="jp.co.cybermissions.com.example.libaraysystem.book.Book" />
     </data>
-
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/listConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <TextView
             android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{detailViewModel.booklist1.get(0).toString()}"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="160dp"
+            android:layout_width="307dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="50dp"
+            android:textAlignment="center"
+            android:text="@{detailViewModel.selectedProperty.description}"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-
-
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/rent_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="219dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="382dp"
             android:background="@color/colorAccent"
             android:padding="10dp"
             android:text="Rent"
             android:textColor="@color/white"
             android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

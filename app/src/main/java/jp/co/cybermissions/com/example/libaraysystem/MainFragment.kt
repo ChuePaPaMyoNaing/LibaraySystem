@@ -24,12 +24,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
@@ -45,7 +43,9 @@ class MainFragment : Fragment() {
     }
 
     // Get a reference to the ViewModel scoped to this Fragment
+
     private val viewModel by viewModels<LoginViewModel>()
+
     private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
@@ -68,11 +68,6 @@ class MainFragment : Fragment() {
         observeAuthenticationState()
 
         binding.authButton.setOnClickListener { launchSignInFlow() }
-
-//        binding..setOnClickListener{
-//            val action = MainFragmentDirections.actionMainFragmentToLoginFragment()
-//            findNavController().navigate(action)
-//        }
 
         binding.listBtn.setOnClickListener { view: View -> view.findNavController()
            .navigate(R.id.action_mainFragment_to_listFragment)
@@ -117,6 +112,7 @@ class MainFragment : Fragment() {
                     binding.authButton.text = getString(R.string.logout_button_text)
                     binding.authButton.setOnClickListener {
                         AuthUI.getInstance().signOut(requireContext())
+                        binding.welcomeText.text = getString(R.string.welcome_message_authed)
                     }
                     binding.listBtn.isVisible = true
                 }

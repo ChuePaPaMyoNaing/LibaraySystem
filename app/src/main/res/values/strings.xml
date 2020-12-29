@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LibaraySystem</string>
+    <string name="app_name">LibrarySystem</string>
     <string name="login_button_text">Login</string>
     <string name="logout_button_text">Logout</string>
     <string name="login_unsuccessful_msg">Login unsuccessful</string>
@@ -8,11 +8,11 @@
     <string name="login_prompt">Successfully Log In!</string>
     <string name="login_btn">Login</string>
     <string name="list_btn">ListOfBooks</string>
-    <string name="settings_fact_type_title">Fun Fact Type</string>
 
-    <string name="fact_type_android">Android</string>
-    <string name="fact_type_california">California</string>
-
-    <!--Shared Preference Keys -->
-    <string name="preference_fact_type_key">fact_type_pref</string>
+<!--    Detail of Books-->
+    <string name="book1_text">Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation, that provides a system for developing application software and deploying it in a cross-platform computing environment</string>
+    <string name="book2_text">HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content</string>
+    <string name="book3_text">Ruby is an interpreted, high-level, general-purpose programming language</string>
+    <string name="book4_text">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines</string>
+    <string name="book5_text">Digital coding is the process of using binary digits to represent letters, characters and other symbols in a digital format</string>
 </resources>

@@ -1,7 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
     compileSdkVersion 29
@@ -11,7 +14,12 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    // Add for using latest experimental build of Android Extensions
+    androidExtensions {
+        experimental = true
     }
     buildTypes {
         release {
@@ -46,6 +54,12 @@ dependencies {
     implementation 'androidx.preference:preference-ktx:1.1.0'
     implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.squareup.moshi:moshi:1.5.0'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.5.0'
+
+
+    implementation 'com.android.support:multidex:1.0.3'
 
     testImplementation 'junit:junit:4.12'
 }

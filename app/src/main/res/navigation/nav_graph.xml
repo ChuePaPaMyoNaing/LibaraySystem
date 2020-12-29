@@ -20,7 +20,6 @@
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
-
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -30,12 +29,8 @@
         <action
             android:id="@+id/action_detailFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+            <argument
+                android:name="selectedProperty"
+                app:argType="jp.co.cybermissions.com.example.libaraysystem.book.Book" />
     </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="jp.co.cybermissions.com.example.libaraysystem.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
-    </fragment>
-
 </navigation>
