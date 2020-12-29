@@ -17,13 +17,13 @@ class DetailFragment : Fragment() {
     private lateinit var viewModel: DetailViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        //binding to book detail xml file
         val binding = DataBindingUtil.inflate<FragmentDetailBinding>(inflater,
                 R.layout.fragment_detail, container, false)
         viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
 
         binding.detailViewModel = viewModel
-
-
+        //action to main fragment
         binding.rentButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_detailFragment_to_mainFragment)
             Toast.makeText(activity, "Book is Rented", Toast.LENGTH_SHORT).show()

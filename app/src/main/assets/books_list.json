@@ -2,26 +2,26 @@
   {
       "imageResId": 1,
       "name":"Java",
-      "description":"Java Programming language"
+      "description":"Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation, that provides a system for developing application software and deploying it in a cross-platform computing environment."
     },
     {
       "imageResId": 2,
       "name":"HTML",
-      "description":"HTML Programming language"
+      "description":"HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content."
     },
     {
       "imageResId": 3,
-      "name":"RUBY",
-      "description":"RUBY Programming language"
+      "name":"C",
+      "description":"C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system."
     },
     {
-      "imageResId": 4,
-      "name":"C#",
-      "description":"C# Programming language"
+    "imageResId": 4,
+    "name":"RUBY",
+    "description":"Ruby is an interpreted, high-level, general-purpose programming language."
     },
     {
       "imageResId": 5,
       "name":"DIGITAL",
-      "description":"DIGITAL Programming language"
+      "description":"Digital coding is the process of using binary digits to represent letters, characters and other symbols in a digital format."
     }
 ]

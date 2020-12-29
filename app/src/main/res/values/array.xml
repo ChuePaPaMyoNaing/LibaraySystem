@@ -1,32 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2019 Razeware LLC
-  ~
-  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
-  ~ of this software and associated documentation files (the "Software"), to deal
-  ~ in the Software without restriction, including without limitation the rights
-  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  ~ copies of the Software, and to permit persons to whom the Software is
-  ~ furnished to do so, subject to the following conditions:
-  ~
-  ~ The above copyright notice and this permission notice shall be included in
-  ~ all copies or substantial portions of the Software.
-  ~
-  ~ Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-  ~ distribute, sublicense, create a derivative work, and/or sell copies of the
-  ~ Software in any work that is designed, intended, or marketed for pedagogical or
-  ~ instructional purposes related to programming, coding, application development,
-  ~ or information technology.  Permission for such use, copying, modification,
-  ~ merger, publication, distribution, sublicensing, creation of derivative works,
-  ~ or sale is expressly withheld.
-  ~
-  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  ~ THE SOFTWARE.
-  -->
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="images">
         <item>@drawable/java</item>
@@ -42,13 +14,5 @@
         <item>HTML</item>
         <item>RUBY</item>
         <item>DIGITAL</item>
-    </string-array>
-
-    <string-array name="descriptions">
-        <item>Java is a set of computer software and specifications developed by James Gosling at Sun Microsystems, which was later acquired by the Oracle Corporation, that provides a system for developing application software and deploying it in a cross-platform computing environment.</item>
-        <item>C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.</item>
-        <item>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.</item>
-        <item>Ruby is an interpreted, high-level, general-purpose programming language.</item>
-        <item>Digital coding is the process of using binary digits to represent letters, characters and other symbols in a digital format.</item>
     </string-array>
 </resources>

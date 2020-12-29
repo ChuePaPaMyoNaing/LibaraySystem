@@ -23,16 +23,17 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //binding with Book List xml file
         val binding = FragmentBookListBinding.inflate(inflater)
         binding.listViewModel = viewModel
 
-
+        //binding with adapter
         binding.recyclerView.adapter = BookGridAdapter(BookGridAdapter.OnClickListener {
             viewModel.displayPropertyDetails(it)
             Log.i(TAG, "Binding")
         })
 
-
+        //action to detail screen
         viewModel.navigateToSelectedProperty.observe(this, Observer {
             if (null != it) {
                 this.findNavController().navigate(
@@ -42,7 +43,6 @@ class ListFragment : Fragment() {
                 viewModel.displayPropertyDetailsComplete()
             }
         })
-
-        return binding.recyclerView.rootView
+        return binding.root
     }
 }

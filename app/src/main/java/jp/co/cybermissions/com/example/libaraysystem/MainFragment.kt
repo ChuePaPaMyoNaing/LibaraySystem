@@ -43,23 +43,16 @@ class MainFragment : Fragment() {
     }
 
     // Get a reference to the ViewModel scoped to this Fragment
-
     private val viewModel by viewModels<LoginViewModel>()
-
     private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
-
-        // TODO Remove the two lines below once observeAuthenticationState is implemented.
         //binding.welcomeText.text = viewModel.getFactToDisplay(requireContext())
         binding.welcomeText.text = getString(R.string.welcome_message_authed)
         binding.authButton.text = getString(R.string.login_btn)
-
-
-
         return binding.root
     }
 
@@ -69,10 +62,10 @@ class MainFragment : Fragment() {
 
         binding.authButton.setOnClickListener { launchSignInFlow() }
 
+        //action to book list screen
         binding.listBtn.setOnClickListener { view: View -> view.findNavController()
            .navigate(R.id.action_mainFragment_to_listFragment)
         }
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -107,8 +100,6 @@ class MainFragment : Fragment() {
                 LoginViewModel.AuthenticationState.AUTHENTICATED -> {
                     //binding.welcomeText.text = getFactWithPersonalization(factToDisplay)
                     binding.welcomeText.text = getString(R.string.login_prompt)
-
-
                     binding.authButton.text = getString(R.string.logout_button_text)
                     binding.authButton.setOnClickListener {
                         AuthUI.getInstance().signOut(requireContext())
@@ -118,7 +109,6 @@ class MainFragment : Fragment() {
                 }
                 else -> {
                     //binding.welcomeText.text = factToDisplay
-
                     binding.authButton.text = getString(R.string.login_button_text)
                     binding.authButton.setOnClickListener {
                         launchSignInFlow()
@@ -128,17 +118,6 @@ class MainFragment : Fragment() {
             }
         })
     }
-
-
-//    private fun getFactWithPersonalization(fact: String): String {
-//        return String.format(
-//            resources.getString(
-//                R.string.welcome_message_authed,
-//                FirebaseAuth.getInstance().currentUser?.displayName,
-//                Character.toLowerCase(fact[0]) + fact.substring(1)
-//            )
-//        )
-//    }
 
     private fun launchSignInFlow() {
         // Give users the option to sign in / register with their email

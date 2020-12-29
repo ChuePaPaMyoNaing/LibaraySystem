@@ -16,7 +16,7 @@ class ListViewModel: ViewModel() {
     private val _navigateToSelectedProperty = MutableLiveData<Book>()
     val navigateToSelectedProperty: LiveData<Book>
         get() = _navigateToSelectedProperty
-
+    //show Book name function
     fun displayPropertyDetails(book: Book){
         _navigateToSelectedProperty.value = book
     }

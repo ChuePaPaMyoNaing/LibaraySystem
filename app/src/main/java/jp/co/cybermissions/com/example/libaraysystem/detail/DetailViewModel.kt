@@ -8,7 +8,7 @@ import jp.co.cybermissions.com.example.libaraysystem.book.Book
 class DetailViewModel( book: Book,
                        app: Application
 ) : AndroidViewModel(app) {
-
+    //argument for book selected
     private val _selectedProperty = MutableLiveData<Book>()
     val selectedProperty: LiveData<Book>
         get() = _selectedProperty
@@ -16,13 +16,4 @@ class DetailViewModel( book: Book,
     init {
         _selectedProperty.value = book
     }
-//
-//    val displayName = Transformations.map(selectedProperty) {
-//
-//    }
-//
-//    val displayDescription = Transformations.map(selectedProperty) {
-//
-//    }
-
 }

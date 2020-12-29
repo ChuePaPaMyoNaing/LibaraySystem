@@ -20,7 +20,6 @@ class BookGridAdapter (private val onClickListener: OnClickListener): ListAdapte
             )
         )
     }
-
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book = getItem(position)
         holder.itemView.setOnClickListener {
@@ -28,7 +27,6 @@ class BookGridAdapter (private val onClickListener: OnClickListener): ListAdapte
         }
         holder.bind(book)
     }
-
     companion object DiffCallback : DiffUtil.ItemCallback<Book>() {
         override fun areItemsTheSame(oldItem: Book, newItem: Book): Boolean {
             return oldItem === newItem

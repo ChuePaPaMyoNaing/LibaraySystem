@@ -22,19 +22,18 @@ class MainActivity : AppCompatActivity() {
         // Up button
         val navController = this.findNavController(R.id.nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this,navController)
-
-        val assetManager = resources.assets //アセット呼び出し
-        val inputStream = assetManager.open("books_list.json") //Jsonファイル
+        //アセット呼び出し
+        val assetManager = resources.assets
+        //Jsonファイル
+        val inputStream = assetManager.open("books_list.json")
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
-        val jsonText: String = bufferedReader.readText() //データ
+        //データ
+        val jsonText: String = bufferedReader.readText()
         Log.d("json",jsonText)
-
         val listBookType = Types.newParameterizedType(List::class.java, Book::class.java)
         val adapter: JsonAdapter<List<Book>> = Moshi.Builder().build().adapter(listBookType)
         val detail: List<Book>? = adapter.fromJson(jsonText)
         Log.d("json2",detail.toString())
-        //inputStream.close()
-
     }
     //Up button
     override fun onSupportNavigateUp(): Boolean {
